@@ -1,0 +1,126 @@
+/* - White: hsl(0, 0%, 100%)
+- Light pink: hsl(275, 100%, 97%)
+- Grayish purple: hsl(292, 16%, 49%)
+- Dark purple: hsl(292, 42%, 14%) */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  background-image: url(./assets/images/background-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-color: hsl(275, 100%, 97%);
+  background-size: 100%;
+  display: flex;
+  background-position: top;
+  background-attachment: fixed;
+}
+
+.main-container {
+  margin: 200px auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0px 31px 44px 10px rgba(0, 0, 0, 0.33);
+  padding: 50px;
+  background-color: white;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.star-icon {
+  margin-right: 40px;
+  width: 30px;
+  height: 30px;
+}
+
+.FAQ-header {
+  font-size: 50px;
+  color: hsl(292, 42%, 14%);
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+}
+
+.question h2 {
+  max-width: 85%;
+  color: hsl(292, 42%, 14%);
+  transition: 0.3s ease;
+}
+
+.question h2:hover {
+  cursor: pointer;
+  color: hsl(276, 81%, 65%);
+}
+
+.plus-icon {
+  border: none;
+  background: url(./assets/images/icon-plus.svg);
+  background-repeat: no-repeat;
+  transition: 0.3s ease;
+  border: 0;
+  width: 30px;
+  height: 30px;
+  align-self: center;
+}
+
+.plus-icon:focus {
+  outline: none;
+  border: none;
+}
+
+.plus-icon:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.plus-icon.open {
+  background: url(./assets/images/icon-minus.svg);
+  transition: 0.3s ease;
+}
+
+.dropdown {
+  display: none;
+  transition: ease-in;
+  max-width: 90%;
+}
+
+.dropdown.show {
+  display: block;
+  font-weight: 500;
+  color: hsl(292, 16%, 49%);
+}
+
+.question-container {
+  border-bottom: 1px solid rgb(224, 221, 221);
+}
+
+.question-container:last-child {
+  border-bottom: none;
+}
+
+@media (min-width: 1024px) {
+  .main-container {
+    max-width: 700px;
+    margin: 50px auto;
+  }
+
+  .question h2 {
+    max-width: 95%;
+  }
+
+  body {
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+    background-size: 90%;
+  }
+}
